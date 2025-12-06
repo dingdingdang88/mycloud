@@ -1,2 +1,48 @@
-<h1>My Private Cloud Files</h1>
-<p>This is the landing page for my file storage.</p>
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>BR 的文件分享站</title>
+    <link rel="stylesheet" href="style.css"> </head>
+<body>
+
+    <div class="container">
+        <h1>云盘文件上传演示 ☁️</h1>
+        <p>⚠️ 注意：这是一个**静态演示**。实际文件上传需要服务器支持。点击按钮后，你需要将文件**手动推送到 GitHub 仓库**。</p>
+        
+        <div class="upload-box">
+            <input type="file" id="file-input" style="display: none;">
+            <button id="upload-btn">点击选择并上传文件</button>
+            <p id="file-status">未选择文件。</p>
+        </div>
+
+        <hr>
+        
+        <h2>现有文件列表</h2>
+        <ul>
+            <li><a href="./index.html">主页文件 (index.html)</a></li>
+        </ul>
+    </div>
+    
+    <script>
+        const fileInput = document.getElementById('file-input');
+        const uploadBtn = document.getElementById('upload-btn');
+        const fileStatus = document.getElementById('file-status');
+
+        uploadBtn.addEventListener('click', () => {
+            // 触发文件选择框
+            fileInput.click();
+        });
+
+        fileInput.addEventListener('change', () => {
+            if (fileInput.files.length > 0) {
+                const fileName = fileInput.files[0].name;
+                fileStatus.innerHTML = `已选择文件：**${fileName}**。<br>请手动将此文件推送到 GitHub 仓库完成上传。`;
+                // 真正的上传逻辑需要后端服务
+                console.log("File selected, but no server to upload to.");
+            }
+        });
+    </script>
+
+</body>
+</html>
