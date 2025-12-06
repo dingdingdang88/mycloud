@@ -44,5 +44,14 @@
         });
     </script>
 
+    <form name="file-upload" method="POST" data-netlify="true" enctype="multipart/form-data">
+    <input type="hidden" name="form-name" value="file-upload" />
+    
+    <label for="upload-file">选择文件:</label>
+    <input type="file" name="upload-file" id="upload-file" required> 
+    
+    <button type="submit">开始上传</button>
+</form>
+
 </body>
 </html>
