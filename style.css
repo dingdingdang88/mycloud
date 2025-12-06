@@ -32,7 +32,15 @@ h1 {
     border-radius: 8px;
 }
 
-#upload-btn {
+/* 样式化文件选择器和提交按钮 */
+#upload-file {
+    margin-bottom: 15px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#submit-btn {
     background-color: #28a745; /* 绿色按钮 */
     color: white;
     padding: 10px 20px;
@@ -43,7 +51,7 @@ h1 {
     transition: background-color 0.3s ease;
 }
 
-#upload-btn:hover {
+#submit-btn:hover {
     background-color: #218838;
 }
 
@@ -56,4 +64,28 @@ hr {
     border: 0;
     border-top: 1px solid #eee;
     margin: 25px 0;
+}
+
+h2 {
+    color: #0366d6;
+    margin-top: 30px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+}
+
+li {
+    background: #f9f9f9;
+    padding: 10px;
+    margin-bottom: 8px;
+    border-radius: 4px;
+    border-left: 5px solid #0366d6;
+}
+
+a {
+    color: #0366d6;
+    text-decoration: none;
 }
